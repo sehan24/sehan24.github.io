@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Layout</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen relative flex items-center justify-center overflow-x-hidden">
+
+    <div class="absolute inset-0 z-0 flex">
+        <div class="w-1/3 md:w-[35%] bg-sky-900 h-full"></div>
+        <div class="w-2/3 md:w-[65%] bg-gray-100 h-full"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5x1 w-full mx-auto p-6 py-12 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24">
+
+        <div class="w-full max-w-xs bg-olive-300 shadow-xl rounded-sm flex flex-col">
+            <div class="p-10 flex flex-col items-center">
+                
+                <div class="w-48 h-48 rounded-full mb-8 overflow-hidden">
+                    <img src="images/profile.png" class="w-full h-full object-cover">
+                </div>
+
+                <h1 class="text-3xl font-bold text-black text-center leading-tight uppercase mb-4">Syekhan Ramadhan</h1>
+
+                <p class="text-[13px] font-medium tracking-widest text-gray-700 text-center">
+                    Mahasiswa<br>Informatika-Unilam
+                </p>
+            </div>
+
+            <div class="bg-white py-4 flex justify-center items-center gap-6 mt-auto">
+                <a href="https://www.instagram.com/sehan_ramadan44?igsh=c3RrM2c5bGo3ZXo3" target="_blank">
+                    <img src="images/instagram.png" alt="Icon 1" class="w-6 h-6 cursor-pointer hover:opacity-70 transition-opacity">
+                </a>
+                <a href="https://www.linkedin.com/in/sehan-ramadan-23bb1834b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
+                    <img src="images/linkedin.png" alt="Icon 1" class="w-6 h-6 cursor-pointer hover:opacity-70 transition-opacity">
+                </a>
+                <a href="https://www.facebook.com/share/1JAVron4cU/" target="_blank">
+                    <img src="images/facebook.png" alt="Icon 1" class="w-6 h-6 cursor-pointer hover:opacity-70 transition-opacity">
+                </a>
+                <a href="https://www.tiktok.com/@brohan024?_r=1&_t=ZS-95gqa3i4vj7" target="_blank">
+                    <img src="images/tiktok.png" alt="Icon 1" class="w-6 h-6 cursor-pointer hover:opacity-70 transition-opacity">
+                </a>
+            </div>
+        </div>
+
+        <div class="w-full max-w-lg">
+            <h2 class="text-7xl font-bold text-black mb-4 tracking-tight">Apa kabar</h2>
+            <h3 class="text-xl font-medium text-black mb-8">Ya, ini halaman portofolio saya</h3>
+
+            <p class="text-gray-600 mb-6 text-[15px] leading-relaxed">
+                Perkenalkan, saya seorang Mahasiswa dari unnversitas Latansa Mashiro Lebak. Fakultas yang Saya pilih adalah teknologi informasi,
+                 prodi informatika. Di sana saya mempelajari tentang pengolahan data pada komputer melalui proses logika. 
+                 Menariknya lulusan dari Jurusan Teknik Informatika sangat dicari dan dibutuhkan oleh segala jenis perusahaan.
+                 <br><br>
+                 Portofolio ini adalah tugas dari mata kuliah Pemrograman Berbasis Web pertemuan ke-4. 
+                 saya membuat ini lebih dari 3 jam karena kemampuan saya yang masih terbatas.saya sangat menghargai siapa saja yang 
+                 membaca dan memberi masukan di sini. 
+            </p>
+
+            <div class="flex flex-wrap gap-4 mb-8">
+                <button onclick="toggleModal()" class="bg-transparent border border-black hover:bg-black hover:text-white transition-colors text-black text-[11px] font-bold px-8 py-3 rounded-full uppercase tracking-widest">
+                    Lihat keahlian & pengalaman saya
+                </button>
+                <div id="modalKeahlian" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">                    
+                    <div class="absolute inset-0 bg-black/60" onclick="toggleModal()"></div>
+                    <div class="relative bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl shadow-2xl p-6 md:p-10">                        
+                        <button onclick="toggleModal()" class="absolute top-4 right-4 text-gray-500 text-2xl font-bold">&times;</button>
+                        <h2 class="text-2xl font-bold text-center mb-6">KEAHLIAN</h2>
+                        <div class="mb-10">
+                            <p class="font-semibold mb-4 text-gray-800">1. MEMAHAMI UI & UX</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class=" rounded flex items-center justify-center">
+                                    <img src="images/amik.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-10">
+                            <p class="font-semibold mb-4 text-gray-800">2. MENGGUNAKAN MICROSOFT OFFICE UNTUK MEMBUAT DOKUMEN BAGI SEKERTARIS</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class=" rounded flex items-center justify-center">
+                                    <img src="images/zenpro.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="text-2xl font-bold text-center mb-6">PENGALAMAN</h2>
+                        <div class="mb-10">
+                            <p class="font-semibold mb-4 text-gray-800">1. WAKIL PANITIA UJIAN SEKOLAH PESNTREN TINGKAT MTS & MA SELAMA 3 SEMESTER</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class=" rounded flex items-center justify-center h-40 overflow-hidden"><img src="images/screenshoot.png"></div>
+                                <div class=" rounded flex items-center justify-center h-40 overflow-hidden"><img src="images/unian_lisan.jpg"></div>
+                                <div class=" rounded flex items-center justify-center h-40 overflow-hidden"><img src="images/Ujian_tulis.jpg"></div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <script>
+                    // munculkan atau sembunyikan modal
+                    function toggleModal() {
+                        const modal = document.getElementById('modalKeahlian');
+                        modal.classList.toggle('hidden'); // Menghapus/menambah class 'hidden'
+                    }
+                </script>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
